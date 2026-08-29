@@ -1,0 +1,64 @@
+generated: '2026-08-28'
+method: probed
+source: live GET probes of /.well-known/* on every host named in apis.yml
+note: >-
+  Every /.well-known/ path probed on every Selective host returned 404. No WellKnown or
+  SecurityTxt pointer is emitted, because nothing was served. The 404s are genuine — the
+  Sitecore origin answers with a real HTML error page (see soft_404_control below), so this
+  is a recorded absence rather than a catch-all host swallowing the probe.
+hit_count: 0
+hosts:
+  - host: https://www.selective.com
+    documents:
+      - path: /.well-known/security.txt
+        status: 404
+        file: null
+      - path: /.well-known/openid-configuration
+        status: 404
+        file: null
+      - path: /.well-known/oauth-authorization-server
+        status: 403
+        file: null
+        note: WAF/edge rejection rather than an application response; no document served.
+      - path: /.well-known/api-catalog
+        status: 404
+        file: null
+      - path: /.well-known/ai-plugin.json
+        status: 404
+        file: null
+      - path: /.well-known/agent-card.json
+        status: 404
+        file: null
+      - path: /.well-known/agent.json
+        status: 404
+        file: null
+  - host: https://customer1.selectiveinsurance.com
+    documents:
+      - path: /.well-known/security.txt
+        status: 404
+        file: null
+      - path: /.well-known/openid-configuration
+        status: 404
+        file: null
+      - path: /.well-known/api-catalog
+        status: 404
+        file: null
+      - path: /.well-known/agent-card.json
+        status: 404
+        file: null
+  - host: https://agent.selectiveflood.com
+    documents:
+      - path: /.well-known/security.txt
+        status: 404
+        file: null
+      - path: /.well-known/agent-card.json
+        status: 404
+        file: null
+soft_404_control:
+  url: https://www.selective.com/.well-known/api-catalog
+  status: 404
+  bytes: 232083
+  content_type: text/html; charset=utf-8
+  verdict: >-
+    Host returns a true 404 status with a rendered Sitecore not-found page; it is not a
+    200-answering catch-all, so the negatives above are trustworthy.

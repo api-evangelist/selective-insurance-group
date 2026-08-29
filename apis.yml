@@ -1,5 +1,16 @@
 aid: selective-insurance-group
 name: "Selective Insurance Group"
+deliveryModel:
+  model: unknown
+  open_source: false
+  commercial: false
+  callable_host: false
+  label: Delivery model not determined — needs a product licence on record
+  confidence: low
+  source:
+  - none
+  generated: '2026-08-28'
+  method: derived
 specificationVersion: '0.23'
 accessModel:
   pricing: unknown
@@ -15,16 +26,89 @@ accessModel:
 image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/selective-insurance-group.png
 tags:
   - Fortune 1000
+  - Insurance
+  - Property and Casualty
+  - Commercial Insurance
+  - Personal Insurance
+  - Flood Insurance
+  - Excess and Surplus
+  - Independent Agents
+  - Financial Services
+created: '2026-03-24'
+modified: '2026-08-28'
+maintainers:
+  - FN: API Evangelist
+    email: info@apievangelist.com
 url: 
   https://raw.githubusercontent.com/api-evangelist/selective-insurance-group/refs/heads/main/apis.yml
-modified: '2026-03-24'
 apis: []
 common:
+  - type: DomainSecurity
+    url: security/selective-insurance-group-domain-security.yml
+  - type: LLMsTxt
+    url: llms/selective-insurance-group-llms.txt
+  - type: Conformance
+    url: conformance/selective-insurance-group-conformance.yml
+  - type: Plans
+    url: plans/selective-insurance-group-plans-pricing.yml
+  - type: RateLimits
+    url: rate-limits/selective-insurance-group-rate-limits.yml
   - type: LinkedIn
     url: https://www.linkedin.com/company/selective-insurance-group
   - type: Website
-    url: https://www.selective-insurance-group.com
+    url: https://www.selective.com
+  - type: Blog
+    url: https://www.selective.com/about-selective/blog
+  - type: Support
+    url: https://www.selective.com/contact-us
+  - type: PrivacyPolicy
+    url: https://www.selective.com/site-services/privacy-notice
+  - type: TermsOfService
+    url: https://www.selective.com/site-services/user-agreement
+  - type: Login
+    url: https://customer1.selectiveinsurance.com/WebApplications/Enterprise/Authentication/Login.aspx
 description: >-
-  Selective Insurance Group is a holding company whose subsidiaries provide standard
-  and specialty insurance for commercial customers and personal lines insurance for
-  individuals through independent agents.
+  Selective Insurance Group, Inc. (NASDAQ: SIGI) is a Branchville, New Jersey holding
+  company whose insurance subsidiaries underwrite standard commercial lines, standard
+  personal lines, and excess and surplus lines property and casualty insurance, plus
+  flood insurance written through the National Flood Insurance Program's Write Your Own
+  program. Coverage is distributed exclusively through independent insurance agents and
+  brokers across the Eastern and Midwestern United States. Selective operates customer
+  and agent self-service portals (MySelective, and the agent portal at
+  customer1.selectiveinsurance.com) and supports policy, billing and claims download into
+  agency management systems, but publishes no public developer program, API documentation,
+  or machine-readable API contract as of this profile.
+x-enrichment:
+  date: '2026-08-28'
+  status: minimal
+  artifacts_added: 6
+  pass: local-v1
+x-coverage:
+  state: none
+  reason: no-developer-program
+  detail: >-
+    Selective Insurance Group serves policyholders and independent agents entirely through
+    login-gated web portals — there is no developer surface of any kind: developer.selective.com
+    and api.selective.com do not resolve in DNS, and /developers, /developer, /api, /api-docs,
+    /openapi.json, /swagger.json and /llms.txt all return 404 from the Sitecore origin on
+    www.selective.com, whose 577-URL sitemap contains no API, developer or integration page.
+  evidence:
+    - url: https://developer.selective.com/
+      status: 0
+    - url: https://api.selective.com/
+      status: 0
+    - url: https://www.selective.com/developers
+      status: 404
+    - url: https://www.selective.com/openapi.json
+      status: 404
+    - url: https://www.selective.com/llms.txt
+      status: 404
+    - url: https://www.selective.com/.well-known/api-catalog
+      status: 404
+    - url: https://www.selective.com/.well-known/agent-card.json
+      status: 404
+    - url: https://customer1.selectiveinsurance.com/.well-known/security.txt
+      status: 404
+    - url: https://www.selective.com/sitemap.xml
+      status: 200
+  checked: '2026-08-28'

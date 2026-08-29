@@ -1,0 +1,54 @@
+generated: '2026-08-28'
+method: searched
+source: https://www.selective.com/agents/agency-client-services
+note: >-
+  Selective Insurance Group publishes no machine-readable API contract, so there is nothing to
+  derive conformance from. This file records what was SEARCHED for and not found, against the
+  insurance regulatory regime's own standards shortlist in scoring.yml
+  (acord, acord-al3, acord-xml, ngds, grlc, cieca-bms, csio, market-reform-contract).
+  No Compliance pointer is emitted — nothing published names a certification or a standard.
+standards:
+  - id: acord
+    conforms: false
+    evidence: >-
+      Selective's agency-client-services page states that serviced policies "download directly
+      into your Agency Management System" with eDocs for declarations pages. Carrier-to-AMS
+      download of that shape is ordinarily carried over ACORD AL3/XML via the IVANS network,
+      but Selective names no standard anywhere on its public site and publishes no
+      implementation guide, so conformance is UNVERIFIED rather than demonstrated. Recorded as
+      false to avoid crediting a standard the provider has not declared.
+    checked: '2026-08-28'
+  - id: acord-al3
+    conforms: false
+    evidence: Not named on any public Selective page; no published download implementation guide.
+    checked: '2026-08-28'
+  - id: acord-xml
+    conforms: false
+    evidence: Not named on any public Selective page; no published transaction schema.
+    checked: '2026-08-28'
+  - id: csio
+    conforms: false
+    evidence: Canadian standard; Selective writes only in the United States.
+    checked: '2026-08-28'
+  - id: cieca-bms
+    conforms: false
+    evidence: Not named publicly; no auto-physical-damage exchange surface documented.
+    checked: '2026-08-28'
+  - id: oauth2
+    conforms: false
+    evidence: >-
+      /.well-known/oauth-authorization-server returned 403 (edge rejection, not a document) and
+      /.well-known/openid-configuration returned 404 on www.selective.com. No public OAuth or
+      OIDC surface.
+    checked: '2026-08-28'
+  - id: rfc9457
+    conforms: false
+    evidence: No API, therefore no error envelope to assess.
+    checked: '2026-08-28'
+domain_standard:
+  declared: false
+  regime: insurance
+  note: >-
+    REWARD-ONLY check. Selective's market (US P&C carrier distributing through independent
+    agents) does have a domain standard family (ACORD), but Selective does not declare it in
+    any public contract or document, and this pipeline will not assert one on its behalf.

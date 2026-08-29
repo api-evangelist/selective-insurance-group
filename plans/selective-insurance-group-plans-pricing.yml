@@ -1,0 +1,10 @@
+generated: '2026-08-28'
+method: searched
+source: https://www.selective.com/
+plan_count: 0
+note: >-
+  Selective Insurance Group publishes no API and therefore no API plans, tiers, quotas or
+  developer pricing. Insurance premium is quoted by an independent agent, not by a
+  self-service pricing page, and no pricing page of any kind exists on www.selective.com
+  (sitemap.xml, 577 URLs, contains no /pricing path). An honest zero, not an omission.
+plans: []
