@@ -1,0 +1,14 @@
+{
+  "repo": "selective-insurance-group",
+  "feeds": [
+    {
+      "source": "https://www.selective.com",
+      "feed_url": "https://www.selective.com/rss/",
+      "title": "",
+      "saved": 0,
+      "method": "discovered"
+    }
+  ],
+  "post_count": 0,
+  "fetched": "2026-08-30T22:33:40Z"
+}
