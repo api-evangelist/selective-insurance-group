@@ -1,7 +1,9 @@
 ---
 title: Selective Insurance Group
 url: https://www.reinsurancene.ws/tag/selective-insurance-group/
-date: '2026-05-25'
+published: ''
+date_basis: harvested
+harvested: '2026-05-25'
 query: '"Selective Insurance Group" press release artificial intelligence'
 position: 3
 source: serpapi-google

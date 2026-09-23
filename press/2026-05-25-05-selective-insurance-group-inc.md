@@ -1,7 +1,9 @@
 ---
 title: selective insurance group, inc.
 url: https://www.sec.gov/Archives/edgar/data/230557/000110465925028157/tm252568d4_def14a.htm
-date: '2026-05-25'
+published: ''
+date_basis: harvested
+harvested: '2026-05-25'
 query: '"Selective Insurance Group" press release artificial intelligence'
 position: 5
 source: serpapi-google
