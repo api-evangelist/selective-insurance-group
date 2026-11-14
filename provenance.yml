@@ -5,6 +5,12 @@ artifacts:
   conformance/selective-insurance-group-conformance.yml:
     method: searched
     evidence: declared in the artifact
+  data-license/selective-insurance-group-data-license.yml:
+    method: harvested
+    evidence: declared in the artifact
+  eligibility/selective-insurance-group-eligibility.yml:
+    method: harvested
+    evidence: declared in the artifact
   front-door-ai/2026-09-17.yml:
     method: unknown
     evidence: no authorship recorded
@@ -17,7 +23,7 @@ artifacts:
   kin/checks-2026-10-23T222754.yml:
     method: generated
     evidence: Kin Score snapshot written by score.rb
-  kin/checks-2026-11-02T082323.yml:
+  kin/checks-2026-11-06T143934.yml:
     method: generated
     evidence: Kin Score snapshot written by score.rb
   kin/score-2026-09-23T000603.yml:
@@ -83,6 +89,9 @@ artifacts:
   kin/score-2026-11-02T082323.yml:
     method: generated
     evidence: Kin Score snapshot written by score.rb
+  kin/score-2026-11-06T143934.yml:
+    method: generated
+    evidence: Kin Score snapshot written by score.rb
   llms/selective-insurance-group-llms.txt:
     method: generated
     evidence: carries an API Evangelist house phrase
@@ -104,6 +113,9 @@ artifacts:
   press/2026-05-25-05-selective-insurance-group-inc.md:
     method: unknown
     evidence: no authorship recorded
+  privacy/selective-insurance-group-privacy-policy.yml:
+    method: harvested
+    evidence: declared in the artifact
   rate-limits/selective-insurance-group-rate-limits.yml:
     method: searched
     evidence: declared in the artifact
@@ -125,6 +137,9 @@ artifacts:
   security/selective-insurance-group-domain-security.yml:
     method: unknown
     evidence: no authorship recorded
+  terms/selective-insurance-group-terms-of-service.yml:
+    method: harvested
+    evidence: declared in the artifact
   well-known/selective-insurance-group-well-known.yml:
     method: unknown
     evidence: no authorship recorded
